@@ -6,13 +6,13 @@
  *@linenum: current line number
  *Return: void
  */
-void tokenize(char *buffer, int linenum)
+void tokenize(char *buffer, unsigned int linenum)
 {
 	char *opcodes;
-	int push_int;
+/*	int push_int;*/
 
 	opcodes = strtok(buffer, " ");
-	if (strcmp(opcodes, "push") == 0)
+/*	if (strcmp(opcodes, "push") == 0)
 		{
 			push_int = strtok(NULL, " ");
 			if (isdigit(push_int) == 0)
@@ -20,8 +20,8 @@ void tokenize(char *buffer, int linenum)
 				printf("L%d: usage: push integer\n", linenum);
 				exit(EXIT_FAILURE);
 			}
-			push(int push_int);
+			push();
 		}
-	else
-		execute(opcodes);
+		else*/
+		execute(opcodes, linenum);
 }
