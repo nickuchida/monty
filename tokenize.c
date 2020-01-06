@@ -6,7 +6,7 @@
  *@linenum: current line number
  *Return: void
  */
-void tokenize(char *buffer, unsigned int linenum)
+void tokenize(char *buffer, unsigned int linenum, stack_t **head)
 {
 	char *opcodes;
 /*	int push_int;*/
@@ -23,5 +23,5 @@ void tokenize(char *buffer, unsigned int linenum)
 			push();
 		}
 		else*/
-		execute(opcodes, linenum);
+	execute(opcodes, linenum, head);
 }
