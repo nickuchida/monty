@@ -7,6 +7,9 @@ int main(int argc, char *argv[])
 	char *linebuffer = NULL;
 	size_t linebuffer_size = 0;
 	unsigned int linenum = 0;
+	stack_t *head;
+
+	head = NULL;
 
 	if (file == NULL)
 	{
@@ -22,7 +25,7 @@ int main(int argc, char *argv[])
 	while (getline(&linebuffer, &linebuffer_size, file) != -1)
 	{
 		linenum++;
-		tokenize(linebuffer, linenum);
+		tokenize(linebuffer, linenum, head);
 	}
 
 	free(linebuffer);
