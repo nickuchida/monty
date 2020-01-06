@@ -1,9 +1,15 @@
 #include "monty.h"
 
+/**
+ * main - checks lines of file to execute opcodes
+ *@argc: argument number
+ *@argv: string of arguments
+ *Return: zero
+ */
 int main(int argc, char *argv[])
 {
 	char *filename = argv[1];
-	FILE* file = fopen(filename, "r");
+	FILE *file = fopen(filename, "r");
 	char *linebuffer = NULL;
 	size_t linebuffer_size = 0;
 	unsigned int linenum = 0;
