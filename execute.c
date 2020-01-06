@@ -7,6 +7,7 @@ void execute(char *opcodes, unsigned int linenum, stack_t *head)
 	instruction_t ops[] = {
 		{"push", push},
 		{"pall", pall},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
